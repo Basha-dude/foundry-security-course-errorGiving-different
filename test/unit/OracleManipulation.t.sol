@@ -66,7 +66,11 @@ contract OracleManipulationTest is Test {
 
     function testFlashLoanBreaksIt() public {
         BuyNFTForCheap buyNFTForCheap = new BuyNFTForCheap(
-            address(oracleManipulation), address(flashLoaner), address(badExchange), address(mockWETH), address(mockUSDC)
+            address(oracleManipulation),
+            address(flashLoaner),
+            address(badExchange),
+            address(mockWETH),
+            address(mockUSDC)
         );
         // instead of paying 1e18 of ETH, we are only going to pay about half that!
         // 1e18 == $100
